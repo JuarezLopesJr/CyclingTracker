@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/setupNavFragment">
+
+    <action
+        android:id="@+id/action_global_trackingFragment"
+        app:destination="@id/trackingNavFragment"
+        app:launchSingleTop="true" />
+
+    <fragment
+        android:id="@+id/setupNavFragment"
+        android:name="com.example.cyclingapp.view.SetupFragment"
+        android:label="SetupFragment">
+        <action
+            android:id="@+id/action_setupFragment_to_cyclingFragment"
+            app:destination="@id/cyclingNavFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cyclingNavFragment"
+        android:name="com.example.cyclingapp.view.CyclingFragment"
+        android:label="CyclingFragment">
+        <action
+            android:id="@+id/action_cyclingFragment_to_trackingFragment"
+            app:destination="@id/trackingNavFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsNavFragment"
+        android:name="com.example.cyclingapp.view.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/statisticsNavFragment"
+        android:name="com.example.cyclingapp.view.StatisticsFragment"
+        android:label="StatisticsFragment" />
+    <fragment
+        android:id="@+id/trackingNavFragment"
+        android:name="com.example.cyclingapp.view.TrackingFragment"
+        android:label="TrackingFragment">
+        <action
+            android:id="@+id/action_trackingFragment_to_cyclingFragment"
+            app:destination="@id/cyclingNavFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+</navigation>

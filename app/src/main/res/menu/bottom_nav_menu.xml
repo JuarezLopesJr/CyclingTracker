@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/cyclingNavFragment"
+        android:icon="@drawable/ic_bike"
+        android:title="Your cycling" />
+
+    <item
+        android:id="@+id/statisticsNavFragment"
+        android:icon="@drawable/ic_graph"
+        android:title="Statistics" />
+
+    <item
+        android:id="@+id/settingsNavFragment"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+
+</menu>
